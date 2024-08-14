@@ -1,0 +1,82 @@
+// In order for bootstrap to work, you need to import it like below
+// uncomment the import statements and refresh the DOM to see!
+// @import "~@fortawesome/fontawesome-free/css/all.min.css";
+// @import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: rgb(31, 31, 31);
+  color: rgb(194, 194, 194);
+}
+
+.header {
+  padding: 20px;
+  min-height: 200px;
+  color: rgb(194, 194, 194);
+  background-color: rgb(44, 44, 44);
+  text-align: center;
+  
+}
+
+#students {
+  width: 50%;
+  border: 1px solid green;
+  padding: 10px;
+  margin: 2px;
+}
+
+#voldy {
+  width: 50%;
+  border: 1px solid red;
+  padding: 10px;
+  margin: 2px;
+}
+
+.card {
+  margin: 3px;
+  width: 45%;
+  display: inline-block;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-img-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: radial-gradient(#2B1F47, #001022);
+  opacity: .7;
+  z-index: 1;
+}
+
+.card-img-overlay > * {
+  z-index: 100;
+}
+
+#filter-container {
+  text-align: center;
+}
+
+.btn-group {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .card,
+  #voldy,
+  #students {
+    width: 100% !important;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+} 
